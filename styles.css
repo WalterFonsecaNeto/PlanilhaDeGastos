@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dbdbdb;
+  padding: 30px;
+}
+
+.titulo {
+  font-size: 24px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+
+  & .card {
+    width: 25%;
+    padding: 20px 15px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  & .card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  & .row {
+    display: flex;
+    gap: 10px;
+  }
+  & .card i {
+    font-size: 30px;
+    color: white;
+  }
+
+  & .card h3 {
+    font-size: 16px;
+  }
+
+  & .card p {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  & .salario {
+    background-color: #1d9021; /* Verde */
+  }
+
+  & .gastos {
+    background-color: #c22b2b; /* Vermelho */
+  }
+
+  & .saldo {
+    background-color: #374151; /* Cinza escuro */
+  }
+}
+
+.container-formulario-tabela {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.container-formularios {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.container-salario-total {
+  display: flex;
+  flex-direction: column;
+  background-color: #0000004e;
+  width: 100%;
+  height: 120px;
+  padding: 20px;
+  gap: 5px;
+  border-radius: 10px;
+
+  & input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  & label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+.container-adicionar-gasto {
+  display: flex;
+  flex-direction: column;
+  background-color: #0000004e;
+  width: 100%;
+  padding: 20px;
+  gap: 5px;
+  border-radius: 10px;
+
+  & .container-info-gastos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  & input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  & label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  & button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #1d9021; /* Verde */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.container-tabela {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+.botao-lixeira {
+  background-color: transparent;
+  border: none;
+
+  & svg {
+    color: #000000;
+    cursor: pointer;
+  }
+  &:hover svg {
+    color: #c22b2b;
+  }
+}

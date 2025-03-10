@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planilha de Gastos</title>
+    <link rel="icon" type="image/x-icon" href="./assets/dinheiro.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2 class="titulo">Planilha de Gastos Pessoais</h2>
+
+    <div class="cards-container">
+      <div class="card salario">
+        <div class="row">
+          <i data-lucide="wallet"></i>
+          <h3>Salário Total</h3>
+        </div>
+        <p>R$ <span id="salario-total">0</span></p>
+      </div>
+
+      <div class="card gastos">
+        <div class="row">
+          <i data-lucide="shopping-bag"></i>
+          <h3>Total de Gastos</h3>
+        </div>
+        <p>R$ <span id="total-gastos">0</span></p>
+      </div>
+
+      <div class="card saldo">
+        <div class="row">
+          <i data-lucide="dollar-sign"></i>
+          <h3>Saldo Restante</h3>
+        </div>
+        <p>R$ <span id="saldo-restante">0</span></p>
+      </div>
+    </div>
+
+    <div class="container-formulario-tabela">
+      <div class="container-formularios">
+        <div class="container-salario-total">
+          <label>Salário:</label>
+          <input type="number" id="salario" />
+        </div>
+        <div class="container-adicionar-gasto">
+          <div class="container-info-gastos">
+            <label>Descrição: </label>
+            <input type="text" id="descricao" />
+          </div>
+
+          <div class="container-info-gastos">
+            <label>Valor: </label>
+            <input type="number" id="valor" />
+          </div>
+          <button onclick="adicionarGasto()">Adicionar Gasto</button>
+        </div>
+      </div>
+
+      <div class="container-tabela">
+        <table>
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Valor (R$)</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-gastos"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
