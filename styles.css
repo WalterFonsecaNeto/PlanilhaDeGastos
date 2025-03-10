@@ -168,3 +168,45 @@ td {
     color: #c22b2b;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reponsividade */
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    gap: 10px;
+    & .card {
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  .container-formulario-tabela {
+    flex-direction: column;
+    gap: 10px;
+    & .container-formularios {
+      width: 100%;
+    }
+  }
+
+  .container-salario-total,
+  .container-adicionar-gasto,
+  .container-tabela {
+    width: 100%;
+  }
+
+}
