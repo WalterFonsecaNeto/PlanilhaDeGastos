@@ -1,10 +1,12 @@
 body {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
   gap: 20px;
+  
 }
 .card {
   width: 195px;
