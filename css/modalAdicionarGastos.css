@@ -1,0 +1,107 @@
+/* Estilos para o modal */
+.modal {
+  display: none; /* Mantém o modal oculto ao carregar a página */
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+}
+
+.modal-content {
+  background-color: #ffffff; /* Fundo branco */
+  padding: 25px;
+  border: none;
+  width: 40%;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+}
+
+/* Estilos para os inputs e labels */
+.container-info-gastos {
+  margin-bottom: 20px;
+}
+
+.container-info-gastos label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333; /* Cor escura para o texto */
+}
+
+.container-info-gastos input,
+.container-info-gastos select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #555; /* Bordas mais escuras */
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333; /* Texto mais escuro */
+  background-color: #f9f9f9; /* Fundo claro para os inputs */
+}
+
+.container-info-gastos input:focus,
+.container-info-gastos select:focus {
+  border-color: #4caf50; /* Cor de foco verde */
+  outline: none;
+  background-color: #fff; /* Fundo branco ao focar */
+}
+
+/* Estilos para os botões */
+.container-botoes-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.botao-modal {
+  padding: 12px 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.botao-modal:hover {
+  background-color: #45a049; /* Verde mais escuro no hover */
+}
+
+.close {
+  padding: 12px 24px;
+  background-color: #c22b2bc5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.close:hover {
+  background-color: #c22b2b; /* Vermelho mais escuro no hover */
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+  .modal-content {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .modal-content {
+    width: 80%;
+  }
+}

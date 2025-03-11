@@ -1,0 +1,111 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  gap: 20px;
+}
+.card {
+  width: 195px;
+  height: 285px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.2s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+.card.bitcoin {
+  background: #f7931a;
+}
+.card.ethereum {
+  background: #3c3c3d;
+}
+.card.dogecoin {
+  background: #f4c542;
+}
+.card.usdt {
+  background: #002868;
+}
+.card.solana {
+  background: #7b3fe4;
+}
+.card.shiba {
+  background: #e60012; /* Cor vermelha para Shiba Inu */
+}
+
+.img {
+  height: 30%;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
+.img-usd {
+  height: 20%;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+}
+.textBox {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+.card.bitcoin .textBox,
+.card.dogecoin .textBox,
+.card.solana .textBox {
+  color: #031753;
+}
+.card.ethereum .textBox,
+.card.usdt .textBox,
+.card.shiba .textBox {
+  color: #ffffff;
+}
+
+.text {
+  font-weight: bold;
+}
+.head {
+  font-size: 20px;
+  font-weight: bold;
+}
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+.card:hover .textBox {
+  opacity: 1;
+}
+.card:hover .img {
+  height: 50%;
+  filter: blur(10px);
+  animation: anim 3s infinite;
+}
+.card:hover .img-usd {
+  height: 30%;
+  filter: blur(10px);
+  animation: anim 3s infinite;
+}
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.card:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
