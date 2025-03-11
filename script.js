@@ -43,11 +43,12 @@ function atualizarTabela() {
           <button class="botao-remover" onclick="removerGasto(${index})">
             <i class="icone-remover" data-lucide="trash-2"></i>
           </button>
-          <button class="botao-editar" onclick="abrirModalAlterar(${index})">
-            <i class="icone-editar" data-lucide="pencil"></i>
-          </button>
         </td>
       </tr>`;
+
+    // <button class="botao-editar" onclick="abrirModalAlterar(${index})">
+    //   <i class="icone-editar" data-lucide="pencil"></i>
+    // </button>;
   });
 
   lucide.createIcons(); // Atualiza os ícones
