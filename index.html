@@ -6,10 +6,9 @@
     <title>Planilha de Gastos</title>
     <link rel="icon" type="image/x-icon" href="./assets/dinheiro.png" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/modalAdicionarGastos.css" />
   </head>
   <body>
-    <h2 class="titulo">Planilha de Gastos Pessoais</h2>
-
     <div class="cards-container">
       <div class="card salario">
         <div class="row">
@@ -41,31 +40,20 @@
         <div class="container-salario-total">
           <label>Salário:</label>
           <input type="number" id="salario" />
-          <button id="remover-salario">
-            Remover Salário
-          </button>
+          <button id="remover-salario">Remover Salário</button>
         </div>
-
-        <div class="container-adicionar-gasto">
-          <div class="container-info-gastos">
-            <label>Descrição: </label>
-            <input type="text" id="descricao" />
-          </div>
-
-          <div class="container-info-gastos">
-            <label>Valor: </label>
-            <input type="number" id="valor" />
-          </div>
-          <button onclick="adicionarGasto()">Adicionar Gasto</button>
-        </div>
+        <button id="abrir-modal">Adicionar Gasto</button>
       </div>
 
       <div class="container-tabela">
         <table>
           <thead>
             <tr>
+              <th>Data</th>
               <th>Descrição</th>
+              <th>Categoria</th>
               <th>Valor (R$)</th>
+              <th>Tipo</th>
               <th>Ações</th>
             </tr>
           </thead>
@@ -74,8 +62,55 @@
       </div>
     </div>
 
+    
+    <div id="modal-gasto" class="modal">
+      <div class="modal-content">
+
+        <span class="close">&times;</span>
+        
+        <div class="container-adicionar-gasto">
+          <div class="container-info-gastos">
+            <label>Data: </label>
+            <input type="date" id="data" />
+          </div>
+
+          <div class="container-info-gastos">
+            <label>Descrição: </label>
+            <input type="text" id="descricao" />
+          </div>
+
+          <div class="container-info-gastos">
+            <label>Categoria: </label>
+            <select id="categoria">
+              <option value="Alimentação">Alimentação</option>
+              <option value="Lazer">Lazer</option>
+              <option value="Educação">Educação</option>
+              <option value="Saúde">Saúde</option>
+              <option value="Outros">Outros</option>
+            </select>
+          </div>
+
+          <div class="container-info-gastos">
+            <label>Valor: </label>
+            <input type="number" id="valor" />
+          </div>
+
+          <div class="container-info-gastos">
+            <label>Tipo: </label>
+            <select id="tipo">
+              <option value="Despesa">Despesa</option>
+              <option value="Receita">Receita</option>
+            </select>
+          </div>
+
+          <button onclick="adicionarGasto()">Adicionar Gasto</button>
+        </div>
+      </div>
+    </div>
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>
+    <script src="./js/modalAdicionarGastos.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         lucide.createIcons();

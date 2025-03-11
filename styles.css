@@ -9,13 +9,9 @@ body {
   padding: 30px;
 }
 
-
-
 .titulo {
   font-size: 24px;
 }
-
-
 
 .cards-container {
   display: flex;
@@ -67,15 +63,12 @@ body {
   }
 }
 
-
-
 .container-formulario-tabela {
   margin-top: 50px;
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
-
 
 .container-formularios {
   width: 25%;
@@ -105,12 +98,11 @@ body {
   & button {
     padding: 10px 20px;
     border: none;
-    background-color:#c22b2b; 
+    background-color: #c22b2b;
     color: white;
     border-radius: 5px;
     cursor: pointer;
   }
-  
 }
 .container-adicionar-gasto {
   display: flex;
@@ -139,6 +131,13 @@ body {
     font-size: 16px;
     font-weight: bold;
   }
+  & select{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
 
   & button {
     padding: 10px 20px;
@@ -149,25 +148,48 @@ body {
     cursor: pointer;
   }
 }
-
-
-
-.container-tabela {
+.container-tabela{
   width: 75%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden; /* Isso garante que o border-radius funcione corretamente */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-th,
-td {
-  border: 1px solid black;
-  padding: 8px;
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f8f8;
+  color: #333;
+  font-weight: bold;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
   text-align: center;
+  margin-right: 5px;
+}
+
+.btn:hover {
+  background-color: #218838;
 }
 .botao-lixeira {
   background-color: transparent;
@@ -181,20 +203,6 @@ td {
     color: #c22b2b;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Reponsividade */
 
@@ -221,5 +229,4 @@ td {
   .container-tabela {
     width: 100%;
   }
-
 }

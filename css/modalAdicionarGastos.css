@@ -1,0 +1,67 @@
+/* Estilos para o modal */
+.modal {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.container-info-gastos {
+  margin-bottom: 15px;
+}
+
+.container-info-gastos label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.container-info-gastos input,
+.container-info-gastos select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
