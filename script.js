@@ -59,17 +59,30 @@ function atualizarTabela() {
 function removerGasto(index) {
   const gastoRemovido = gastos[index];
 
+  // Subtrai o valor da receita ou despesa
   if (gastoRemovido.tipo === "Despesa") {
-    despesa -= gastoRemovido.valor; // Subtrai o valor da despesa
-    localStorage.setItem("despesa", despesa.toFixed(2)); // Atualiza o localStorage
+    despesa -= gastoRemovido.valor;
+    localStorage.setItem("despesa", despesa.toFixed(2));
   } else if (gastoRemovido.tipo === "Receita") {
-    receita -= gastoRemovido.valor; // Subtrai o valor da receita
-    localStorage.setItem("receita", receita.toFixed(2)); // Atualiza o localStorage
+    receita -= gastoRemovido.valor;
+    localStorage.setItem("receita", receita.toFixed(2));
   }
 
-  gastos.splice(index, 1); // Remove o gasto da lista
-  localStorage.setItem("gastos", JSON.stringify(gastos)); // Atualiza o localStorage
-  atualizarTabela(); // Atualiza a tabela
+  // Remove o gasto da lista
+  gastos.splice(index, 1);
+  localStorage.setItem("gastos", JSON.stringify(gastos));
+
+  // Atualiza a interface
+  atualizarInterface();
+}
+
+// Função para atualizar a interface
+function atualizarInterface() {
+  // Atualiza os valores totais na interface
+  document.getElementById("receita-total").textContent = receita.toFixed(2);
+  document.getElementById("total-gastos").textContent = despesa.toFixed(2);
+  atualizarSaldo(); // Atualiza o saldo restante
+  atualizarTabela(); // Atualiza a tabela de gastos
 }
 
 // Função para adicionar uma nova entrada (receita ou despesa)

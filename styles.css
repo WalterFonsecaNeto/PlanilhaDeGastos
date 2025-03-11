@@ -21,7 +21,8 @@ body {
 
   & .card {
     width: 25%;
-    padding: 20px 15px;
+    height: 120px;
+    padding: 25px 15px;
     border-radius: 10px;
     color: white;
     text-align: center;
