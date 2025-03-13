@@ -45,6 +45,12 @@ function importData(event) {
 
             // Salva os dados no Local Storage
             localStorage.setItem('gastos', data);
+
+            // Atualiza as variáveis globais e a interface
+            gastos = JSON.parse(data); // Atualiza a lista de gastos
+            recalcularTotais(); // Recalcula os totais de receita e despesa
+            carregarValoresIniciais(); // Atualiza a interface
+
             alert('Dados importados com sucesso!');
         } catch (error) {
             alert('Erro: O arquivo não contém um JSON válido!');
