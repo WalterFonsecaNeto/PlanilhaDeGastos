@@ -63,6 +63,24 @@
           href="http://127.0.0.1:5500/html/criptomoedas.html"
           >Criptomoedas</a
         >
+        <button class="botao-exportar-dados" onclick="exportData()">
+          Exportar Dados
+        </button>
+
+        <div class="container-importar-dados">
+          <div class="card-importar-dados">
+            <label for="importFile">
+              <span class="icon">📂</span>
+              <span class="text">Importar Dados</span>
+            </label>
+            <input
+              type="file"
+              id="importFile"
+              onchange="importData(event)"
+              accept=".json"
+            />
+          </div>
+        </div>
       </div>
     </div>
 
@@ -124,6 +142,7 @@
     <script src="script.js"></script>
     <script src="./js/abrirModalAdicionarEntrada.js"></script>
     <script src="./js//gerarExel.js"></script>
+    <script src="./js/dadosJson.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         lucide.createIcons();

@@ -210,7 +210,7 @@ tbody tr:hover {
   background-color: #333; /* Cinza mais claro no hover */
 }
 
-.botao-gerar-exel{
+.botao-gerar-exel {
   width: 20%;
   text-align: center;
   padding: 12px 18px;
@@ -227,6 +227,67 @@ tbody tr:hover {
 .botao-gerar-exel:hover {
   background-color: #45a049; /* Cinza mais claro no hover */
 }
+
+.botao-exportar-dados {
+  width: 20%;
+  text-align: center;
+  padding: 12px 18px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.botao-exportar-dados:hover {
+  background-color: #c22b2b; /* Vermelho mais claro no hover */
+}
+
+/* Container do card */
+.container-importar-dados {
+  width: 20%;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+.card-importar-dados {
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  & label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  & input {
+    display: none;
+  }
+
+  & .text {
+    font-size: 16px;
+    color: #007bff;
+    font-weight: bold;
+  }
+  & .icon {
+    font-size: 32px;
+  }
+}
+.card-importar-dados:hover {
+  background-color: #f0f8ff;
+  border-color: #0056b3;
+}
+
+
 /* Reponsividade */
 @media (max-width: 768px) {
   .cards-container {
@@ -251,34 +312,49 @@ tbody tr:hover {
   }
 
   .botao-abrir-modal,
-  .botao-criptomoedas{
+  .botao-criptomoedas,
+  .botao-gerar-exel,
+  .botao-exportar-dados,
+  .container-importar-dados{
     width: 30%;
   }
 }
 
 @media (max-width: 550px) {
   .botao-abrir-modal,
-  .botao-criptomoedas{
+  .botao-criptomoedas,
+  .botao-gerar-exel,
+  .botao-exportar-dados,
+  .container-importar-dados {
     width: 40%;
   }
 }
 
 @media (max-width: 400px) {
   .botao-abrir-modal,
-  .botao-criptomoedas{
+  .botao-criptomoedas,
+  .botao-gerar-exel,
+  .botao-exportar-dados,
+  .container-importar-dados {
     width: 50%;
   }
 }
 
 @media (max-width: 350px) {
   .botao-abrir-modal,
-  .botao-criptomoedas{
+  .botao-criptomoedas,
+  .botao-gerar-exel,
+  .botao-exportar-dados,
+  .container-importar-dados {
     width: 60%;
   }
 }
 @media (max-width: 285px) {
   .botao-abrir-modal,
-  .botao-criptomoedas{
+  .botao-criptomoedas,
+  .botao-gerar-exel,
+  .botao-exportar-dados,
+  .container-importar-dados {
     width: 100%;
   }
 }
