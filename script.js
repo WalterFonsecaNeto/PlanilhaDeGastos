@@ -23,8 +23,15 @@ function atualizarTabela() {
   const tabela = document.getElementById("tabela-gastos");
   tabela.innerHTML = ""; // Limpa a tabela
 
+  // Ordena os gastos por data (do mais antigo para o mais recente)
+  gastos.sort((a, b) => {
+    const dataA = new Date(a.data.split('/').reverse().join('-')); // Converte "DD/MM/AAAA" para "AAAA-MM-DD"
+    const dataB = new Date(b.data.split('/').reverse().join('-')); // Converte "DD/MM/AAAA" para "AAAA-MM-DD"
+    return dataA - dataB;
+  });
+
+  // Adiciona os gastos ordenados à tabela
   gastos.forEach((gasto, index) => {
-    // Determina a classe do botão com base no tipo
     const classeBotao =
       gasto.tipo === "Despesa" ? "botao-despesa" : "botao-receita";
 
@@ -45,10 +52,6 @@ function atualizarTabela() {
           </button>
         </td>
       </tr>`;
-
-    // <button class="botao-editar" onclick="abrirModalAlterar(${index})">
-    //   <i class="icone-editar" data-lucide="pencil"></i>
-    // </button>;
   });
 
   lucide.createIcons(); // Atualiza os ícones
