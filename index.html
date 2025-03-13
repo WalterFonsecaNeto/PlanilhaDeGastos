@@ -55,11 +55,32 @@
         <button id="abrir-modal" class="botao-abrir-modal">
           + Nova Entrada
         </button>
+        <button class="botao-gerar-exel" onclick="gerarExcel()">
+          Exportar EXEL
+        </button>
         <a
           class="botao-criptomoedas"
           href="https://walterfonsecaneto.github.io/PlanilhaDeGastos/html/criptomoedas.html"
           >Criptomoedas</a
         >
+        <button class="botao-exportar-dados" onclick="exportData()">
+          Exportar Dados
+        </button>
+
+        <div class="container-importar-dados">
+          <div class="card-importar-dados">
+            <label for="importFile">
+              <span class="icon">📂</span>
+              <span class="text">Importar Dados</span>
+            </label>
+            <input
+              type="file"
+              id="importFile"
+              onchange="importData(event)"
+              accept=".json"
+            />
+          </div>
+        </div>
       </div>
     </div>
 
@@ -80,31 +101,22 @@
           <select id="categoria">
             <!-- Opção inicial (placeholder) -->
             <option value="" disabled selected>Selecione a categoria</option>
-
-            <!-- Categorias de Receita -->
-            <optgroup label="Receita">
-              <option value="Salário">Salário</option>
-              <option value="Freelance">Freelance</option>
-              <option value="Investimentos">Investimentos</option>
-              <option value="Presente">Presente</option>
-              <option value="Outros (Receita)">Outros (Receita)</option>
-            </optgroup>
-
-            <!-- Categorias de Despesa -->
-            <optgroup label="Despesa">
-              <option value="Alimentação">Alimentação</option>
-              <option value="Lazer">Lazer</option>
-              <option value="Educação">Educação</option>
-              <option value="Saúde">Saúde</option>
-              <option value="Transporte">Transporte</option>
-              <option value="Outros (Despesa)">Outros (Despesa)</option>
-            </optgroup>
+            <option value="Salário">Salário</option>
+            <option value="Freelance">Freelance</option>
+            <option value="Investimentos">Investimentos</option>
+            <option value="Presente">Presente</option>
+            <option value="Alimentação">Alimentação</option>
+            <option value="Lazer">Lazer</option>
+            <option value="Educação">Educação</option>
+            <option value="Saúde">Saúde</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Outros">Outros</option>
           </select>
         </div>
 
         <div class="container-info-gastos">
           <label>Valor: </label>
-          <input type="number" id="valor" placeholder="Valor (ex: 100,00)"/>
+          <input type="number" id="valor" placeholder="Valor (ex: 100,00)" />
         </div>
 
         <div class="container-info-gastos">
@@ -129,6 +141,8 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="script.js"></script>
     <script src="./js/abrirModalAdicionarEntrada.js"></script>
+    <script src="./js//gerarExel.js"></script>
+    <script src="./js/dadosJson.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         lucide.createIcons();
